@@ -199,9 +199,9 @@ window.functionName();</pre>
   color: window.prompt('Favorite Color'),
   tool: window.prompt('Analog Printer?'),
   count: window.prompt('Favorite Number?'),
-  message: answers.count + ' ' + answers.color + ' ' + answers.tool + 's',
+  message: function() { return answers.count + ' ' + answers.color + ' ' + answers.tool + 's'; },
   annoy: function(){ 
-      alert('You told us: ' + answers.message);
+      alert('You told us: ' + answers.message());
     }
 };
 answers.annoy();</pre>
